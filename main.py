@@ -1,5 +1,7 @@
 import pygame
 from constants import *
+from player import *
+from circleshape import *
 
 
 def main():
@@ -23,6 +25,9 @@ def main():
                 return
 
         screen.fill((0, 0, 0))
+
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+        player.draw(screen)
 
         pygame.display.flip()
         dt_ms = clock.tick(60)
